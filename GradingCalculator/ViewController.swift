@@ -11,32 +11,21 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var gradeLetter: UILabel!
     @IBOutlet weak var personalPercentage: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
-    @IBAction func doesTheMath(_ sender: Any) {
-        personalPercentage.resignFirstResponder()
-        
-        if let number1 = Double(personalPercentage.text!){
-            let sum = number1 * percent
-            gradeLetter.text = String(sum)
-        
-        
+    func gradePercentage(pPercentage: Double, percent: Double) -> Double{
+        var sum = 0.0
+        sum = percent * pPercentage
+        return sum
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    @IBAction func doesTheMath(_ sender: Any) {
+        personalPercentage.resignFirstResponder()
+    }
+    gradePercentage(pPercentage: Double(personalPercentage.text!), percent: 0.01)
+
 }
 
