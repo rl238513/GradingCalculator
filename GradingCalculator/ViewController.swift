@@ -9,23 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var gradeLetter: UILabel!
-    @IBOutlet weak var personalPercentage: UITextField!
+    
+    @IBOutlet weak var letterGrade: UILabel!
+    @IBOutlet weak var numberGrade: UILabel!
+    @IBOutlet weak var currentGrade: UITextField!
+    @IBOutlet weak var desiredGrade: UITextField!
+    @IBOutlet weak var examWeight: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    func gradePercentage(pPercentage: Double, percent: Double) -> Double{
-        var sum = 0.0
-        sum = percent * pPercentage
-        return sum
-    }
     
-    @IBAction func doesTheMath(_ sender: Any) {
-        personalPercentage.resignFirstResponder()
-    }
-    gradePercentage(pPercentage: Double(personalPercentage.text!), percent: 0.01)
+    @IBAction func button(_ sender: Any) {
+        
+         if let startingGrade = Double(currentGrade.text!), let endGrade = Double(desiredGrade.text!), let endGrade = Double(examWeight){
+        var grade = (100 * endGrade - (100 - finalExamWeight) * startingGrade) / finalExamWeight
+         } else {
+            let alert = UIAlertController(title: "empty textfield", message: "good job dumb dumb want some gum gum", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+
+
+
+
+
 
 }
-
+}
