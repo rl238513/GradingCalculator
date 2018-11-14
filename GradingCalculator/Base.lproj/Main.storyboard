@@ -75,11 +75,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="currentGrade" destination="vYi-HE-DQg" id="GRz-lw-2cx"/>
                         <outlet property="desiredGrade" destination="qcj-2I-LMR" id="NRR-gI-BVS"/>
                         <outlet property="examWeight" destination="ko4-KR-vw0" id="k77-9c-2AT"/>
-                        <outlet property="gradeLetter" destination="br1-o9-CwB" id="k4o-Ig-Pma"/>
+                        <outlet property="image" destination="Y47-ro-LIP" id="0OR-ep-yES"/>
                         <outlet property="letterGrade" destination="g3h-dt-py4" id="iLe-fg-SFV"/>
-                        <outlet property="personalPercentage" destination="vYi-HE-DQg" id="Hui-ey-Okj"/>
+                        <outlet property="numberGrade" destination="br1-o9-CwB" id="Jbu-Mi-BAT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
