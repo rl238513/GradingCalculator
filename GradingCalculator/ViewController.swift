@@ -54,9 +54,9 @@ class ViewController: UIViewController {
     func acolor(){
         if image.backgroundColor == .green{
             image.backgroundColor = .red
-             self.view.backgroundColor = .green
+             self.view.backgroundColor = .blue
         }else{
-            image.backgroundColor = .green
+            image.backgroundColor = .blue
             self.view.backgroundColor = .red
         }}
 }
