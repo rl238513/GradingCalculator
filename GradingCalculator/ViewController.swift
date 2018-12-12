@@ -38,7 +38,6 @@ class ViewController: UIViewController {
             
             
             
-            
         } else {
             let alert = UIAlertController(title: "empty textfield", message: "good job dumb dumb want some gum gum", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
